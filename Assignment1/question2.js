@@ -1,5 +1,4 @@
 function technicalInterviewCheck(marks, cutoff) {
-
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
@@ -22,12 +21,14 @@ function technicalInterviewCheck(marks, cutoff) {
     });
 }
 
+let marks = [70, 80, 75, 85];
+let cutoff = 60;
 
-technicalInterviewCheck([80, 75, 85, 70], 70)
-    .then((average) => {
-        console.log("Technical Interview Cleared");
-        console.log("Average Score:", average);
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+technicalInterviewCheck(marks, cutoff)
+.then((average) => {
+    console.log("Technical Interview Cleared");
+    console.log("Average:", average);
+})
+.catch((error) => {
+    console.log(error);
+});
