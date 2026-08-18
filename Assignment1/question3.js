@@ -1,13 +1,12 @@
 function finalSelectionCheck(codingAverage, technicalAverage, cutoff) {
-
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
 
-            let finalAverage = (codingAverage + technicalAverage) / 2;
+            let average = (codingAverage + technicalAverage) / 2;
 
-            if (finalAverage >= cutoff) {
-                resolve(finalAverage);
+            if (average >= cutoff) {
+                resolve(average);
             } else {
                 reject("Sorry, you have not cleared the final selection cutoff.");
             }
@@ -16,12 +15,15 @@ function finalSelectionCheck(codingAverage, technicalAverage, cutoff) {
     });
 }
 
+let codingAverage = 80;
+let technicalAverage = 77.5;
+let cutoff = 60;
 
-finalSelectionCheck(75, 77.5, 70)
-    .then((average) => {
-        console.log("Final Selection Cleared");
-        console.log("Final Average:", average);
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+finalSelectionCheck(codingAverage, technicalAverage, cutoff)
+.then((average) => {
+    console.log("Final Selection Cleared");
+    console.log("Final Average:", average);
+})
+.catch((error) => {
+    console.log(error);
+});
