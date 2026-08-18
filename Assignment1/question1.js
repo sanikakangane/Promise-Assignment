@@ -24,12 +24,10 @@ function codingScoreCheck(marks, cutoff) {
 
 
 codingScoreCheck([80, 70, 90, 60], 70)
-
     .then((average) => {
         console.log("Coding Assessment Cleared");
         console.log("Average Score:", average);
     })
-
     .catch((error) => {
         console.log(error);
     });
