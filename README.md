@@ -1,4 +1,4 @@
-# Promise Assignment
+# Promise-Assignment
 
 A simple JavaScript project that uses Promises to simulate a recruitment process with three stages:
 
