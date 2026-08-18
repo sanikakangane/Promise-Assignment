@@ -1,5 +1,4 @@
 function codingScoreCheck(marks, cutoff) {
-
     return new Promise((resolve, reject) => {
 
         setTimeout(() => {
@@ -22,12 +21,14 @@ function codingScoreCheck(marks, cutoff) {
     });
 }
 
+let marks = [80, 70, 90, 80];
+let cutoff = 60;
 
-codingScoreCheck([80, 70, 90, 60], 70)
-    .then((average) => {
-        console.log("Coding Assessment Cleared");
-        console.log("Average Score:", average);
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+codingScoreCheck(marks, cutoff)
+.then((average) => {
+    console.log("Coding Assessment Cleared");
+    console.log("Average:", average);
+})
+.catch((error) => {
+    console.log(error);
+});
